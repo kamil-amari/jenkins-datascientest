@@ -1,0 +1,23 @@
+movie_service:
+  repository: amarikamil5/movie_service
+  tag: ""
+  database:
+    uri: postgresql://movie-service:password@movie-db/movie-db-dev
+    user: movie-service
+    password: password
+    db: movie-db
+  replicas: 1
+
+cast_service:
+  host_url: http://cast_service:8000/api/v1/casts/
+  repository: amarikamil5/cast_service
+  tag: ""
+  database: 
+    uri: postgresql://cast-service:password@cast-db/cast-db-dev
+    user: cast-service
+    password: password
+    db: cast-db
+  replicas: 1
+
+nginx:
+  replicas: 1
