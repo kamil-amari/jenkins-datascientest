@@ -18,11 +18,11 @@ spec:
         image: postgres:12.1-alpine
         env:
         - name: POSTGRES_USER
-          value: {{ .Values.movie-service.database.user }}
+          value: {{ .Values.movie_service.database.user }}
         - name: POSTGRES_PASSWORD
-          value: {{ .Values.movie-service.database.password }}
+          value: {{ .Values.movie_service.database.password }}
         - name: POSTGRES_DB
-          value: {{ .Values.movie-service.database.db }}
+          value: {{ .Values.movie_service.database.db }}
         ports:
         - containerPort: 5432
         volumeMounts:
