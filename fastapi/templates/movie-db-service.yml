@@ -4,7 +4,7 @@ metadata:
   name: movie-db
 spec:
   selector:
-    app: {{ .Release.Name }}-movie-db
+    app: movie-db
   type: ClusterIP
   ports:
   - protocol: TCP

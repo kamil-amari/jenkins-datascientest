@@ -4,7 +4,7 @@ metadata:
   name: cast-db
 spec:
   selector:
-    app: {{ .Release.Name }}-cast-db
+    app: cast-db
   type: ClusterIP
   ports:
   - protocol: TCP
