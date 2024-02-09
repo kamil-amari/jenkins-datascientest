@@ -1,6 +1,6 @@
 movie_service:
   repository: amarikamil5/movie_service
-  tag: ""
+  tag: latest
   database:
     uri: "postgresql://movie-service:password@movie-db/movie-db-dev"
     user: movie-service
@@ -11,7 +11,7 @@ movie_service:
 cast_service:
   host_url: "http://cast_service:8000/api/v1/casts/"
   repository: amarikamil5/cast_service
-  tag: ""
+  tag: latest
   database: 
     uri: "postgresql://cast-service:password@cast-db/cast-db-dev"
     user: cast-service
