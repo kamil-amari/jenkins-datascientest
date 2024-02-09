@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}-cast-db-statefulset
+  name: "{{ .Release.Name }}-cast-db-statefulset"
 spec:
-  serviceName: {{ .Release.Name }}-cast-db
+  serviceName: "{{ .Release.Name }}-cast-db"
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-cast-db
+      app: "{{ .Release.Name }}-cast-db"
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-cast-db
+        app: "{{ .Release.Name }}-cast-db"
     spec:
       containers:
       - name: cast-db

@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-movie-service-deployment
+  name: "{{ .Release.Name }}-movie-service-deployment"
 spec:
   replicas: {{ .Values.movie_service.replicas }}
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-movie-service
+      app: "{{ .Release.Name }}-movie-service"
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-movie-service
+        app: "{{ .Release.Name }}-movie-service"
     spec:
       containers:
-      - name: {{ .Release.Name }}-movie-service
+      - name: "{{ .Release.Name }}-movie-service"
         image: '{{ .Values.movie_service.repository }}:{{ .Values.movie_service.tag | default .Chart.AppVersion }}'
         ports:
         - containerPort: 8000

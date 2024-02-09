@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .Release.Name }}-cast-service-deployment
+  name: "{{ .Release.Name }}-cast-service-deployment"
 spec:
-  replicas: {{ .Values.cast_service.replicas }}
+  replicas: "{{ .Values.cast_service.replicas }}"
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-cast-service
+      app: "{{ .Release.Name }}-cast-service"
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-cast-service
+        app: "{{ .Release.Name }}-cast-service"
     spec:
       containers:
-      - name: {{ .Release.Name }}-cast-service
-        image: '{{ .Values.cast_service.repository }}:{{ .Values.cast_service.tag | default .Chart.AppVersion }}'
+      - name: "{{ .Release.Name }}-cast-service"
+        image: "{{ .Values.cast_service.repository }}:{{ .Values.cast_service.tag | default .Chart.AppVersion }}"
         ports:
         - containerPort: 8000
         env:

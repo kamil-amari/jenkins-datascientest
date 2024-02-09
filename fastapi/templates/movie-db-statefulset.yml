@@ -1,17 +1,17 @@
 apiVersion: apps/v1
 kind: StatefulSet
 metadata:
-  name: {{ .Release.Name }}-movie-db-statefulset
+  name: "{{ .Release.Name }}-movie-db-statefulset"
 spec:
-  serviceName: {{ .Release.Name }}-movie-db
+  serviceName: "{{ .Release.Name }}-movie-db"
   replicas: 1
   selector:
     matchLabels:
-      app: {{ .Release.Name }}-movie-db
+      app: "{{ .Release.Name }}-movie-db"
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}-movie-db
+        app: "{{ .Release.Name }}-movie-db"
     spec:
       containers:
       - name: movie-db
