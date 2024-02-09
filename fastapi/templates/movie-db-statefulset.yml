@@ -45,4 +45,8 @@ spec:
   selector:
     app: {{ .Release.Name }}-movie-db
   type: ClusterIP
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
 
