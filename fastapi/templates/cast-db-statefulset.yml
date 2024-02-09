@@ -45,7 +45,7 @@ spec:
   selector:
     app: {{ .Release.Name }}-cast-db
   type: ClusterIP
-    ports:
-    - protocol: TCP
-      port: 5433
-      targetPort: 5432
+  ports:
+  - protocol: TCP
+    port: 5433
+    targetPort: 5432
