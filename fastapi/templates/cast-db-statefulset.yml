@@ -36,16 +36,3 @@ spec:
       resources:
         requests:
           storage: 10Gi
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: cast-db
-spec:
-  selector:
-    app: {{ .Release.Name }}-cast-db
-  type: ClusterIP
-  ports:
-  - protocol: TCP
-    port: 5433
-    targetPort: 5432

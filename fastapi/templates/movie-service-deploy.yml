@@ -22,17 +22,4 @@ spec:
           value: {{ .Values.movie_service.database.uri }}
         - name: CAST_SERVICE_HOST_URL
           value: {{ .Values.cast_service.host_url }}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ .Release.Name }}-movie-service
-spec:
-  selector:
-    app: {{ .Release.Name }}-movie-service
-  ports:
-    - protocol: TCP
-      port: 8001
-      targetPort: 8000
-  type: ClusterIP
 
