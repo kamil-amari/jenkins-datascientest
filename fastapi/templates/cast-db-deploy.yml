@@ -26,8 +26,8 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: postgres_data_cast
+        - name: postgres-data-cast
           mountPath: /var/lib/postgresql/data
       volumes:
-      - name: postgres_data_cast
+      - name: postgres-data-cast
         emptyDir: {}
