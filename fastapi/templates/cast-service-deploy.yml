@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-cast-service-deployment"
 spec:
-  replicas: "{{ .Values.cast_service.replicas }}"
+  replicas: {{ .Values.cast_service.replicas }}
   selector:
     matchLabels:
       app: "{{ .Release.Name }}-cast-service"
