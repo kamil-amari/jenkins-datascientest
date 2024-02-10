@@ -28,11 +28,6 @@ spec:
         volumeMounts:
         - name: postgres_data_cast
           mountPath: /var/lib/postgresql/data
-  volumeClaimTemplates:
-  - metadata:
-      name: postgres_data_cast
-    spec:
-      accessModes: [ "ReadWriteOnce" ]
-      resources:
-        requests:
-          storage: 10Gi
+      volumes:
+      - name: postgres_data_cast
+        emptyDir: {}
