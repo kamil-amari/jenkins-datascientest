@@ -10,7 +10,7 @@ spec:
   template:
     metadata:
       labels:
-        app:{{ .Release.Name }}-nginx
+        app: {{ .Release.Name }}-nginx
     spec:
       containers:
       - name: {{ .Release.Name }}-nginx
