@@ -26,8 +26,8 @@ spec:
         ports:
         - containerPort: 5432
         volumeMounts:
-        - name: postgres_data_movie
+        - name: postgres-data-movie
           mountPath: /var/lib/postgresql/data
       volumes:
-      - name: postgres_data_movie
+      - name: postgres-data-movie
         emptyDir: {}
