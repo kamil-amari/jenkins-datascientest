@@ -29,5 +29,5 @@ spec:
         - name: postgres_data_movie
           mountPath: /var/lib/postgresql/data
       volumes:
-      - name: postgres_data_cast
+      - name: postgres_data_movie
         emptyDir: {}
