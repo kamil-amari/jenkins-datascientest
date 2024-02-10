@@ -1,5 +1,6 @@
 apiVersion: apps/v1
-metadata: Deployment
+kind: Deployment
+metadata:
   name: "{{ .Release.Name }}-cast-db-deployment"
 spec:
   serviceName: "{{ .Release.Name }}-cast-db"
