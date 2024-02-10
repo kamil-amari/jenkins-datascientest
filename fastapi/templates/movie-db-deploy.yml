@@ -3,7 +3,6 @@ kind: Deployment
 metadata:
   name: "{{ .Release.Name }}-movie-db-deployment"
 spec:
-  serviceName: "{{ .Release.Name }}-movie-db"
   replicas: 1
   selector:
     matchLabels:
